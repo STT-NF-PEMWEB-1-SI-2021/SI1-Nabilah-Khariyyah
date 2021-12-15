@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Latihan JavaScript 02</title>
+        <script>
+            let nama = "Nurul Fikri";
+            let bil1 = 8;
+            let bil2 = 4;
+            console.log("Nama Saya : " + nama);
+            let bil3 = 8 * 4;
+            console.log(bil1 + " * " + bil2 + " = " + bil3);
+        </script>
+    </head>
+    <body>
+        <p id="nama"></p>
+        <script>
+            document.getElementById("nama").innerText = "Nama Saya : " + nama;
+        </script>
+
+        <p id="hitung"></p>
+        <script>
+            document.getElementById("hitung").innerText = bil1 + " * " + bil2 + " = " + bil3;
+        </script>
+    </body>
+</html>
