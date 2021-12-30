@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aplikasi Chat</title>
+        <style>
+            div {
+                border: 2px solid black;
+                border-bottom: 0.5px solid black;
+                width: 500px;
+                height: 500px;
+            }
+            .div2{
+                border: 2px solid black;
+                border-top: 0px;
+                width: 500px;
+                height: 20px;
+            }
+            input[type=text]{
+                width: 443px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td id="hasil"></td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        <div class="div2">
+            <tbody>
+                <tr>
+                    <td><input type="text" id="masukan">
+                        <button onclick="simpan()">kirim</button></td>
+                </tr>
+            </tbody>
+        </div>
+
+        <script>
+            let hasil = document.getElementById("hasil")
+            let masukan = document.getElementById("masukan")
+            let penampung = ""
+
+            function simpan() {
+                penampung += masukan.value + "<br>"
+                hasil.innerHTML = penampung
+                masukan.value = ""
+            }
+        </script>
+    </body>
+</html>

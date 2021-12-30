@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<HTML lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Picker</title>
+        <style>
+            body{
+                width: auto;
+                margin-top: 200px;
+                margin-left: 500px;
+                margin-right: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pilihlah salah satu gambar dibawah ini :</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><br>
+                            <select name="select" onchange="animals">
+                                <option value="pilih">Jenis Kucing</option>
+                                <option value='kucing'>Kucing</option>
+                                <option value='harimau'>Harimau</option>
+                                <option value='singa'>singa</option>
+                                <option value='cheetah'>Cheetah</option>
+                                <option value='puma'>Puma</option>
+                                <option value='matul'>Macan Tutul</option>
+                            </select><br>
+                            <br>
+                            <img>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <script>
+            let animals = document.querySelector("select")
+    
+            animals.onchange = function() {
+                let image = document.querySelector('img')
+
+                if (animals.value == "kucing") {
+                    image.setAttribute("src", "img/hewan1.jpg");
+                    alert("Ini adalah gambar Kucing");
+                    return true;
+                } 
+                else if (animals.value == "harimau") {
+                    image.setAttribute("src", "img/hewan2.jpg");
+                    alert("Ini adalah gambar Harimau");
+                    return true;
+                } 
+                else if (animals.value == "singa") {
+                    image.setAttribute("src", "img/hewan3.jpg"); 
+                    alert("Ini adalah gambar Singa");
+                    return true;
+                } 
+                else if (animals.value == "cheetah") {
+                    image.setAttribute("src", "img/hewan4.jpg");
+                    alert("Ini adalah gambar Cheetah");
+                    return true;
+                } 
+                else if (animals.value == "puma") {
+                    image.setAttribute("src", "img/hewan5.jpg");
+                    alert("Ini adalah gambar Puma");
+                    return true;
+                } 
+                else if (animals.value == "matul") {
+                    image.setAttribute("src", "img/hewan6.jpg");
+                    alert("Ini adalah gambar Macan Tutul");
+                    return true;
+                }
+                else{
+                    0
+                }
+            }
+        </script>
+    </body>
+</HTML>
