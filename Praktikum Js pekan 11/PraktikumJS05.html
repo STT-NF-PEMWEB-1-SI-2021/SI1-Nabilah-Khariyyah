@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <style>
+            body{
+                width: auto;
+                margin-top: 200px;
+                margin-left: 500px;
+                margin-right: 500px;
+            }
+            fieldset{
+                border: 2px solid black;
+            }
+            h1{
+                color: rgb(162, 180, 214);
+                background-color: rgb(26, 52, 100);
+                text-align: center;
+                border-radius: 5px;
+            }
+            input[type=submit]{
+                width: 100px;
+                height: 30px;
+                border-radius: 5px;
+                background-color: rgb(137, 177, 214);
+                color: rgb(8, 39, 58);
+                align-content: center;
+                margin-left: 150px;
+                height: 30px;
+                width: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <form onsubmit="goes()">
+                <h1>Tiket Jalan-Jalan</h1>
+                <div>
+                    <table >
+                        <tr>
+                            <td>Nama</td>
+                            <td>: <input type="text" id="nama"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>: <input type="text" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Jam keberangkatan</td>
+                            <td>: <input type="time" id="jam"></td>
+                        </tr>
+                        <tr>
+                            <td>Jumlah tiket</td>
+                            <td>: <input type="number" id="jumlah" min="1"></td>
+                        </tr>
+                        <tr>
+                            <td>Tujuan</td>
+                            <td>: <input type="text" id="tujuan" ></td>
+                        </tr>
+                    </table>
+                </div><br>
+            </form>
+            <div class="button">
+                <label for="submit">
+                    <input type="submit" id="submit" onclick="goes()">
+                </label>
+            </div>
+            <div id="tambilan">
+                <p></p>
+            </div>
+        </fieldset>
+        <script>
+            function goes(){
+                let nama = document.getElementById("nama").value;
+                let email = document.getElementById("email").value;
+                let jam = document.getElementById("jam").value;
+                let jumlah = document.getElementById("jumlah").value
+                let tujuan = document.getElementById("tujuan").value
+    
+                if (nama== ""){
+                    document.getElementById("nama")
+                    return false;
+                }
+                if (email ==""){
+                    document.getElementById("email")
+                    return false;
+                }
+                if (jam ==""){
+                    document.getElementById("jam")
+                    return false;
+                }
+                if (jumlah =="jumlah"){
+                    document.getElementById("jumlah")
+                    return false;
+                }
+                if (tujuan == "tujuan"){
+                    document.getElementById("tujuan")
+                        return false;
+                    
+                }else {
+                    alert("Pesanan Anda telah berhasil");
+                    document.write("<h2> Berikut adalah hasil pendaftaran Anda.")
+                    document.write("<br><br> Nama      = " + nama);
+                    document.write("<br> Email         = " + email);
+                    document.write("<br> Jam Berangkat = " + jam);
+                    document.write("<br> Jumlah tiket  = "+ jumlah);
+                    document.write("<br> Tujuan        = " + tujuan)
+                }
+            }
+        </script>
+    </body>
+</html>
